@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkedin</title>
+    <!-- linking style-sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- linking fontAwsome for using the Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
+    "
+    />
+  </head>
+  <body>
+    <!-- Creating the Navigation Bar  -->
+
+    <nav class="navbar">
+      <div class="navbar_left">
+        <a href="index.html" class="logo"
+          ><img src="img/logo.png" alt="imgoflogo"
+        /></a>
+
+        <div class="search_box">
+          <img src="img/search.png" alt="" />
+          <input type="text " placeholder="Search" />
+        </div>
+      </div>
+      <div class="navbar_center">
+        <ul>
+          <li>
+            <a href="index.html" class="active_link"
+              ><img src="img/home.png" alt="imgofhome" /><span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="network.html"
+              ><img src="img/network.png" alt="imgofhome" /><span
+                >My Network</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="img/jobs.png" alt="imgofhome" /><span>Jobs</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="img/message.png" alt="imgofhome" /><span
+                >Messaging</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="img/notification.png" alt="imgofhome" /><span
+                >Notifications</span
+              ></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="navbar_right">
+        <div class="online">
+          <img
+            src="img/Naveen1.png"
+            style="border: 1px solid black"
+            class="nav_profile_img"
+            alt="profile"
+            onclick="toggleMenu()"
+          />
+        </div>
+      </div>
+      <!-- ----------Network page menu -->
+
+      <div class="profile_menu_container" id="profileMenu">
+        <div class="profile_menu">
+          <div class="user_info">
+            <img src="img/Naveen1.png" style="border: 1px solid black" alt="" />
+            <div>
+              <h3>Naveen Sahu</h3>
+              <a href="profile.html"><button>See your profile</button></a>
+            </div>
+          </div>
+          <hr />
+          <h3>Account</h3>
+          <a href="#" class="profile_menu_link">
+            <img src="img/premium.png" alt="" />
+            <p>Try 1 month of Premium for &#8377;0</p>
+            <span>></span>
+          </a>
+
+          <a href="#" class="profile_menu_link">
+            <p>Settings & Privacy</p>
+          </a>
+
+          <a href="#" class="profile_menu_link">
+            <p>Help</p>
+          </a>
+
+          <a href="#" class="profile_menu_link">
+            <p>Language</p>
+          </a>
+
+          <hr />
+          <h3>Manage</h3>
+          <a href="#" class="profile_menu_link">
+            <p>Post & Activity</p>
+          </a>
+          <a href="#" class="profile_menu_link">
+            <p>Job Posting Account</p>
+          </a>
+
+          <hr />
+          <a href="#" class="profile_menu_link">
+            <p>Sign Out</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- ------------------Navigation Bar Closed------ -->
+
+    <!--------------------- main body creation ----------------------->
+    <div class="container">
+      <!-- connect sidebar -->
+      <div class="connect_sidebar">
+        <div class="connect_manage">
+          <div style="display: flex;
+              justify-content: space-between;
+              margin-bottom: 5px;
+            ">
+            <h3>Manage my network</h3>
+            <a href="#"
+              ><i class="fa-solid fa-list" style="margin-right: 10px"></i
+            ></a>
+          </div>
+
+          <hr />
+
+          <div>
+            <a href="#"
+              ><i class="fa-solid fa-users"></i>
+              <span style="margin-right: 180px">Connections</span> 18</a
+            >
+          </div>
+
+          <div>
+            <a href="#">
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Following & followers</span></a
+            >
+          </div>
+
+          <div>
+            <a href="#"
+              ><i class="fa-solid fa-user-group"></i>
+              <span style="margin-right: 225px">Group</span>1</a
+            >
+          </div>
+
+          <div>
+            <a href="#"
+              ><i class="fa-solid fa-calendar-days"></i> <span>Events</span></a
+            >
+          </div>
+
+          <div>
+            <a href="#"
+              ><i class="fa-regular fa-file-lines"></i>
+              <span style="margin-right: 220px">Pages</span> 18</a
+            >
+          </div>
+
+          <div>
+            <a href="#"
+              ><i class="fa-regular fa-newspaper"></i>
+              <span style="margin-right: 181px">Newsletters</span> 18</a
+            >
+          </div>
+
+          <div>
+            <a href="#"
+              ><i class="fa-solid fa-hashtag"></i> <span>Hashtags</span></a
+            >
+          </div>
+        </div>
+
+        <div class="left_premium">
+          <h3><span>Ad &middot;&middot;&middot;</span></h3>
+
+          <span>Naveen, unlock your full potential with Linkedin Premium</span>
+          <div class="middle_Premium">
+            <img src="img/Naveen1.png" alt="" />
+            <img src="img/key.png" alt="">
+          </div>
+          <p>See who's viewed your profile in last 90 days</p>
+
+          <a href="#"><button>Try for Free</button></a>
+
+        </div>
+      </div>
+
+      <!---------------- connection invitation section --------------------------->
+
+      <div class="connect_menu">
+        <div class="grow_container">
+          <a href="#">Grow</a>
+          <a href="#">Catch up</a>
+        </div>
+        <div class="connect_conatiner">
+          <div class="profile_container_inner">
+            <div>
+              <h3>Invitations</h3>
+              <a href="#">See all</a>
+            </div>
+            <hr />
+
+            <div class="connection_invitations">
+              <img src="img/user-2.png" alt="" />
+              <div>
+                <div class="connection_details">
+                  <h3>Er.Jitesh Sharma</h3>
+                  <span
+                    >Recuritment Specialist | Certified Naukri Maestro
+                    Recruiter, Assistant...</span
+                  >
+                  <p>
+                    <img src="img/microsoft.png" alt="" /> Vivekananda Institute
+                    of Technology, Jaipur
+                  </p>
+                </div>
+              </div>
+              <div class="connection_btn">
+                <a href="#" class="primary_btn">Ignore</a>
+                <span><button>Accept</button></span>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="connection_invitations">
+              <img src="img/user-3.png" alt="" />
+              <div>
+                <div class="connection_details">
+                  <h3>Mitchal Fadrea</h3>
+                  <span
+                    >Recuritment Specialist | Certified Naukri Maestro
+                    Recruiter, Assistant...</span
+                  >
+                  <p>
+                    <img src="img/north.png" alt="" /> Vivekananda Institute of
+                    Technology, Jaipur
+                  </p>
+                </div>
+              </div>
+              <div class="connection_btn">
+                <a href="#" class="primary_btn">Ignore</a>
+                <span><button>Accept</button></span>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="connection_invitations">
+              <img src="img/user-5.png" alt="" />
+              <div>
+                <div class="connection_details">
+                  <h3>John Sina</h3>
+                  <span
+                    >Recuritment Specialist | Certified Naukri Maestro
+                    Recruiter, Assistant...</span
+                  >
+                  <p>
+                    <img src="img/network.png" alt="" /> Vivekananda Institute
+                    of Technology, Jaipur
+                  </p>
+                </div>
+              </div>
+              <div class="connection_btn">
+                <a href="#" class="primary_btn">Ignore</a>
+                <span><button>Accept</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="prreee">
+          <div class="premium_description">
+            <h3>Job search smarter</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <div>
+            <img src="img/user-2.png" alt="" class="time_pass_pic" />
+            <img src="img/user-3.png" alt="" class="time_pass_pic" />
+            <img src="img/user-5.png" alt="" class="time_pass_pic" />
+
+            <p>Dr. Dhiraj and millions of other members use Premium</p>
+          </div>
+          <a href="#"><button>Try Premium for &#8377;0</button></a>
+          <p><span>1-month free trial. Cancel anytime.</span></p>
+        </div>
+      </div>
+          
+
+        <!-- ------------creating the connection Card section----------------- -->
+        <div class="card_profile_description">
+            <h3 style="margin-bottom: 15px;">Groups you may be interested in</h3>
+          <div class="profile_card_container">
+            <div class="card_container">
+              <div class="card">
+                <img src="img/cover.webp" alt="" class="coverimg" />
+                <img src="img/freecode.png" alt="" class="profileimg" />
+              </div>
+              <div class="content">
+                <h3>freeCodeCamp</h3>
+                <span>12,246,356</span>
+                <a href="#"><button>Join</button></a>
+              </div>
+            </div>
+
+            <div class="card_container">
+              <div class="card">
+                <img src="img/cover.webp" alt="" class="coverimg" />
+                <img src="img/javaScript.jpeg" alt="" class="profileimg" />
+              </div>
+              <div class="content">
+                <h3>JavaScript</h3>
+                <span>1,243,362 members</span>
+                <a href="#"><button>Join</button></a>
+              </div>
+            </div>
+
+            <div class="card_container">
+              <div class="card">
+                <img src="img/cover.webp" alt="" class="coverimg" />
+                <img src="img/python.jpeg" alt="" class="profileimg" />
+              </div>
+              <div class="content">
+                <h3>Python Developers Community</h3>
+                <span>2,386,947 members</span>
+                <a href="#"><button>Join</button></a>
+              </div>
+            </div>
+
+            <div class="card_container">
+              <div class="card">
+                <img src="img/cover.webp" alt="" class="coverimg" />
+                <img src="img/react.jpeg" alt="" class="profileimg" />
+              </div>
+              <div class="content">
+                <h3>React Developers</h3>
+                <span>510,176 members</span>
+                <a href="#"><button>Join</button></a>
+              </div>
+            </div>
+
+            <div class="card_container">
+              <div class="card">
+                <img src="img/cover.webp" alt="" class="coverimg" />
+                <img src="img/ml.jpeg" alt="" class="profileimg" />
+              </div>
+              <div class="content">
+                <h3>Machine Learning Community</h3>
+                <span>1,593,886 members</span>
+                <a href="#"><button>Join</button></a>
+              </div>
+            </div>
+
+            <div class="card_container">
+              <div class="card">
+                <img src="img/cover.webp" alt="" class="coverimg" />
+                <img src="img/internship.jpeg" alt="" class="profileimg" />
+              </div>
+              <div class="content">
+                <h3>Internship Group</h3>
+                <span>811,897 members</span>
+                <a href="#"><button>Join</button></a>
+              </div>
+            </div>
+
+            <div class="card_container">
+              <div class="card">
+                <img src="img/Ai.png" alt="" class="coverimg" />
+                <!-- <img src="img/freecode.png" alt="" class="profileimg" /> -->
+              </div>
+              <div class="content">
+                <h3>Certified Generative AI Expert<sup>TM</sup></h3>
+                <span>Sat,Aug 10 - Sun,Aug 11</span>
+                <span>33,574 attendees</span>
+                <a href="#"><button>View</button></a>
+              </div>
+            </div>
+
+            <div class="card_container">
+              <div class="card">
+                <img src="img/collage.png" alt="" class="coverimg" />
+                <!-- <img src="img/freecode.png" alt="" class="profileimg" /> -->
+              </div>
+              <div class="content">
+                <h3>Envisioning Success in Collage and Career</h3>
+                <span>Sat,Aug 24, 7:00 PM</span>
+                <span>Upcommings</span>
+                <a href="#"><button>View</button></a>
+              </div>
+            </div>
+
+            <div class="card_container">
+              <div class="card">
+                <img src="img/stratup.png" alt="" class="coverimg" />
+                <!-- <img src="img/freecode.png" alt="" class="profileimg" /> -->
+              </div>
+              <div class="content">
+                <h3>Startup Bootcamp</h3>
+                <span>Sun,Sep 7 , 7:00 AM</span>
+                <span>Upcommings</span>
+                <a href="#"><button>View</button></a>
+              </div>
+            </div>
+
+            <div class="card_container">
+              <div class="card">
+                <img src="img/Ai boot.png" alt="" class="coverimg" />
+                <!-- <img src="img/freecode.png" alt="" class="profileimg" /> -->
+              </div>
+              <div class="content">
+                <h3>AI Bootcamp</h3>
+                <span>Sat,Oct 5,7:00PM</span>
+                <span>Upcommings</span>
+                <a href="#"><button>View</button></a>
+              </div>
+            </div>
+
+            <div class="card_container">
+              <div class="card">
+                <img src="img/Ideathon.png" alt="" class="coverimg" />
+                <!-- <img src="img/freecode.png" alt="" class="profileimg" /> -->
+              </div>
+              <div class="content">
+                <h3>Ideation For Startup</h3>
+                <span>Mon,Dec 14,7:00 PM</span>
+                <span>Upcommings</span>
+                <a href="#"><button>View</button></a>
+              </div>
+            </div>
+
+            <div class="card_container">
+              <div class="card">
+                <img src="img/Forensic.png" alt="" class="coverimg" />
+                <!-- <img src="img/freecode.png" alt="" class="profileimg" /> -->
+              </div>
+              <div class="content">
+                <h3>16th International Conference on Forensic Science 2025</h3>
+                <span>Tue,Dec 5,7:00 AM</span>
+                <span>Upcommings</span>
+                <a href="#"><button>View</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="more">
+            <a href="#" class="connection_link">See all </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="profile_footer">
+      <div class="sidebar_useful_links">
+        <a href="#">About</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Help Center</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Advertising</a>
+        <a href="#">Get The App</a>
+        <a href="#">More</a>
+        <div class="copyright_msg">
+          <img src="img/logo.png" alt="" />
+          <p>Linkedup &copy;; 2024 All right reversed</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let profileMenu = document.querySelector("#profileMenu");
+
+      function toggleMenu() {
+        profileMenu.classList.toggle("open_menu");
+        console.log("hello");
+      }
+    </script>
+  </body>
+</html>

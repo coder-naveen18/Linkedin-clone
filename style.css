@@ -1,0 +1,1459 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins , sans-self";
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e9e9e393;
+    color: #5f5f5f;
+}
+
+a{
+    text-decoration: none;
+    color: #5f5f5f;
+}
+
+
+/* ---------Styling The Navigation Bar------------- */
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 6px 6% ;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.667); */
+}
+
+.logo img{
+    width: 30px;
+    margin-right: 15px;
+    display: block;
+}
+
+.navbar_center ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.navbar_center ul li a{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 5px 8px;
+    padding-right:  5px;
+    position: relative;
+}
+
+.navbar_center ul li a img{
+    width: 30px;
+}
+
+.navbar_center ul li a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #045be6;
+    position: absolute;
+    bottom: -13px;
+    transition: width 0.3s ;
+}
+.navbar_center ul li a:hover::after ,
+.navbar_center ul li a.active_link::after{
+    width: 100%;
+}
+
+.nav_profile_img{
+    width: 40px;
+    border-radius:  50%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+
+.online{
+    position: relative;
+}
+.online::after{
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    right: 0px;
+    top: 0px;
+    background: #41db51;
+    position: absolute;
+}
+
+.search_box{
+    background: #f0f2f5;
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.navbar_left{
+    display: flex;
+    align-items: center;
+}
+
+.search_box img{
+    width: 14px;
+}
+.search_box:hover{
+background: #8ba9da7a;
+}
+.search_box input{
+    width: 100%;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    border: 0;
+}
+
+
+/* ----------- Navigation Bar syling Ending */
+
+/* ------------styleing the user profile drop down menu -------*/
+
+.profile_menu_container{
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    width: 320px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    
+
+}
+.profile_menu_container.open_menu{
+    max-height: 400px;
+}
+
+.profile_menu{
+    background: white;
+    color: #333;
+    counter-reset: #fff;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: inset 0 -3rem 3rem rgba(199, 212, 199, 0.3),
+    0 0 0 2px white;
+    
+}
+.user_info{
+    display: flex;
+    align-items: center;
+
+}
+.user_info img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.user_info h3{
+
+    font-weight:500;
+    margin-bottom: -7px;
+
+}
+.user_info a{
+    color: #c9c9c9;
+    font-size: 13px;
+}
+.user_info a button{
+    background: #fff;
+    border: 2px solid #045be6;
+    border-radius: 15px;
+    margin-top: 15px;
+    width: 10rem;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.profile_menu_link hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #fff;
+    margin: 15px 0 10px;
+}
+
+
+.profile_menu_link{
+    display: flex;
+    align-items: center;
+    color: #151515;
+    margin: 12px 0;
+    font-size: 14px;
+
+}
+.profile_menu_link p{
+    width: 100%;
+}
+
+.profile_menu_link img{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+
+/* Styling the middle part of the website */
+
+.container{
+    padding: 20px 6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* ---------------left side bar ------------------*/
+.left_side_Bar{
+    flex-basis: 25%;
+    align-self: flex-start;
+    position: sticky;
+    top: 73px;
+}
+
+.sidebar_profile_box{
+    background: #fff;
+    border-radius: 10px;
+
+}
+.sidebar_profile_info{
+    padding: 0 25px;
+
+}
+.sidebar_profile_info img{
+    width: 90px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 4px;
+    margin-top: -45px;
+
+}
+
+.sidebar_profile_info h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+.sidebar_profile_info h3{
+    font-size: 14px;
+    font-weight: 500;
+    color: #777;
+
+}
+.sidebar_profile_info ul{
+    list-style: none;
+    margin: 20px 0;
+
+}
+.sidebar_profile_info ul li{
+    width: 100%;
+    margin: 5px;
+    font-size: 13px;
+
+}
+.sidebar_profile_info ul li span{
+    float: right;
+    color: #045be6;
+}
+
+.sidebar_profile_link{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+}
+
+.sidebar_profile_link a{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    font-size: 13px;
+    border-left: 1px solid#ccc;
+}
+.sidebar_profile_link a:first-child{
+    border-left: 0;
+}
+.sidebar_profile_link a img{
+    width: 20px;
+    margin-right: 10px;
+}
+.sidebar_actively{
+    background: #fff;
+    padding: 5px 25px;
+    margin: 12px 0;
+    border-radius: 10px;
+}
+.sidebar_actively h3{
+    color: #777;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 20px 0 10px;
+
+}
+
+.sidebar_actively a{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #888;
+    margin: 3px 0;
+}
+
+.sidebar_actively a img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+
+.discover_more_link{
+    border-top: 1px solid#ccc;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.discover_more_link a{
+    color: #045be6;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+
+/*------------------------ right side bar----------------- */
+.right_side_Bar{
+    flex-basis: 25%;
+    align-self: flex-start;
+    position: sticky;
+    top: 73px;
+   
+}
+.sidebar_news{
+    background: #fff;
+    padding: 10px 25px ;
+    border-radius: 10px;
+}
+.info_icon{
+    width: 15px;
+    float: right;
+    margin-top: 15px;
+}
+
+
+.sidebar_news h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0 30px;
+}
+.sidebar_news a{
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+.sidebar_news span{
+    font-size: 12px;
+}
+
+.sidebar_news .read_more_link{
+    color: #045be6;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+
+.sidebar_ad{
+    background: #fff;
+    padding: 15px 25px;
+    text-align: center;
+    margin: 12px 12px;
+    font-size: 12px;
+    border-radius: 10px;
+}
+.sidebar_ad img{
+    width: 60px;
+    border-radius: 50%;
+    margin: 4px;
+}
+
+.sidebar_ad small{
+    float: right;
+    font-weight: 500;
+
+}
+.sidebar_ad p{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.sidebar_ad b{
+    display: block;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.ad_link{
+    display: inline-block;
+    border: 1px solid #045be6;
+    border-radius: 30px;
+    padding: 5px 15px;
+    font-weight: 500;
+    color: #045be6;
+    margin: 20px auto 10px;
+}
+
+.sidebar_useful_links{
+    padding: 15px 25px;
+    text-align: center;
+
+}
+.sidebar_useful_links a{
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+
+}
+.copyright_msg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.copyright_msg img{
+    width: 18px;
+    margin-right: 4px;
+}
+
+/* ------------------main content ------------------*/
+.main_Bar{
+    flex-basis: 47%;
+}
+.create_post{
+    background: #fff;
+    border-radius: 10px;
+
+}
+.create_post_input{
+    padding: 20px 25px 10px;
+    display: flex;
+    align-items: flex-start;
+}
+.create_post_input img{
+    width: 35px;
+    border-radius: 50% ;
+    margin-right: 10px;
+}
+.create_post_input button{
+    width: 100%;
+    height: 50px;
+    
+    outline: 0;
+    resize: none;
+    background: transparent;
+    margin-top: -8px;
+    border: 1px solid #151515;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.create_post_input button:hover{
+    background: #dfdddd57;
+}
+
+
+
+.create_post_link{
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.create_post_link li{
+    list-style: none;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    flex-basis: 25%;
+    height: 40px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.create_post_link li img{
+    width: 15px;
+    margin-right: 5px;
+}
+.create_post_link li:last-child{
+    background: #045be6;
+    color: #fff;
+    border-top: 0;
+    border-radius: 0;
+}
+
+.sort_by{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.sort_by hr{
+    flex: 1;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+
+}
+.sort_by p{
+    font-size: 13px;
+    padding-left: 5px;
+}
+.sort_by p span{
+    font-weight: 600;
+    cursor: pointer;
+}
+.sort_by p span img{
+    width: 12px;
+    margin-left: 3px; 
+}
+
+
+.post{
+    background: #fff;
+    padding: 20px 25px 5px;
+    margin: 5px 0 15px;
+    border-radius: 10px;
+}
+
+.post_author{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.post_author img{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.post_author h1{
+    font-size: 18px;
+    font-weight: 600;
+    counter-reset: #333;
+
+}
+.post_author small{
+    display: block;
+    margin-bottom: -2px;
+
+}
+
+.post p{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.post_impression{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+}
+
+.post_impression div{
+    display: flex;
+    align-items: center;
+
+}
+.post_impression img{
+    width: 15px;
+    margin-right: -5px;
+}
+.liked_user{
+    margin-left: 10px;
+}
+
+.post_avtivity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.post_avtivity div{
+    display: flex;
+    align-items: center;
+
+}
+.post_avtivity_user_icons{
+    width: 22px;
+    border-radius: 50%;
+}
+
+.post_avtivity_arrow_icons{
+    width: 12px;
+    margin-left: 5px;
+}
+.post_avtivity_link img{
+    width: 18px;
+    margin-right: 8px;
+
+}
+
+
+/* --------------------Profile page------------------ */
+
+
+.profile_main{
+    flex-basis: 73%;
+
+}
+.profile_sidebar{
+    flex-basis: 25%;
+    align-self: flex-start;
+    position: sticky;
+    top: 73px;
+}
+
+.profile_conatiner{
+    background: #fff;
+    border-radius: 10px;
+
+}
+.profile_container_inner{
+    padding: 0 4% 10px;
+
+}
+.profile_pic{
+    width: 150px;
+    border-radius: 50%;
+    margin-top: -75px;
+    padding: 5px;
+    background: #fff;
+}
+
+.profile_conatiner h1{
+    font-size: 28px;
+    font-weight: 600;
+    color: #222;
+}
+.profile_conatiner b{
+    font-weight: 500;
+
+}
+.profile_conatiner p{
+    margin-top: 5px;
+
+}
+.profile_conatiner p a{
+    color: #045be6;
+    font-weight: 500;
+
+}
+
+.mutual_connection{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+
+}
+.mutual_connection img{
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.profile_btn{
+    margin: 20px 0;
+
+}
+.profile_btn a{
+    display: inline-flex;
+    align-items: center;
+    background: #e4e6eb;
+    padding: 6px 15px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.profile_btn a img{
+    width: 18px;
+    margin-right: 5px;
+
+}
+.profile_btn .primary_btn{
+background: #045be6;
+color: #fff;
+}
+.profile_discription{
+    background: #fff;
+    padding: 20px 4% 30px;
+    margin: 12px 0;
+    border-radius: 10px;
+}
+.profile_discription h2{
+    color: #333;
+    margin: 10px 0 20px;
+    font-weight: 600;
+}
+.see_more_link{
+    display: block;
+    text-align: right;
+    font-size: 15px;
+}
+.profile_des_row{
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0 ;
+
+}
+.profile_des_row img{
+    width: 50px;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+.profile_des_row div{
+    width: 100%;
+}
+.profile_des_row h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+.profile_des_row b{
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+}
+.profile_des_row p {
+    margin-top: 15px;
+
+}
+.profile_des_row hr{
+    border: 0;
+    border-bottom: 1px solid #999;
+    margin-top: 10px;
+}
+
+.experience_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    font-weight: 500;
+
+}
+.experience_link img{
+    width: 20px;
+    margin-left: 8px ;
+}
+
+.skills_btn{
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 6px 18px;
+    border: 1px solid #777;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.language_btn{
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 6px 18px;
+    background: #e4e6eb;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+/* ---------- profile right sidebar ---------*/
+.profile_sidebar.sidebar_ad{
+    margin: 0;
+}
+
+.sidebar_people{
+    background: #fff;
+    padding: 15px 25px;
+    margin: 12px 0;
+    font-size: 12px;
+    border-radius: 10px;
+    
+}
+.sidebar_people h3{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0 20px;
+}
+
+.sidebar_people_row{
+    display: flex;
+    align-items: flex-start;
+    margin: 6px 0;
+}
+.sidebar_people_row img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+.sidebar_people_row h2{
+    font-weight: 500;
+    font-size: 16px;
+}
+.sidebar_people_row a{
+    display: inline-block;
+    margin: 10px 0;
+    padding: 5px 25px;
+    border: 1px solid #5f5f5f;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.profile_footer{
+    padding: 0 6% 30px;
+}
+.profile_footer .sidebar_useful_links{
+    text-align: left;
+    padding: 0;
+}
+
+.profile_footer .copyright_msg{
+    justify-content: flex-start;
+
+}
+#showmore_links{
+    display: none;
+}
+
+/* ----------for small screen-------- */
+/* @media only screen and (max-width:600px){
+  
+    .search_box{
+        background: transparent;
+        width: auto;
+        padding: 0;
+
+    }
+    .search_box input{
+        width: 0;
+        padding: 0;
+    }
+    .navbar_center ul li a span{
+        display: none;
+    }
+    .navbar_center ul li a {
+        padding-right: 0;
+        margin: 5px;
+    }
+    .nav_profile_img{
+        width: 30px;
+    }
+    .container{
+        padding: 15px 3%;
+    }
+    .left_side_Bar,.right_side_Bar{
+        flex-basis: 100%;
+        position: relative;
+        top: unset;
+    }
+    .main_Bar{
+        flex-basis: 100%;
+    }
+    .post_impression {
+        margin: 2px 0;
+    }
+    .post_avtivity_link span{
+        display: none;
+
+    }
+    .post_avtivity_link img{
+        margin-right: 0;
+    }
+    .profile_main,.profile_sidebar{
+        flex-basis: 100%;
+    }
+    .profile_conatiner{
+        font-size: 14px;
+    }
+    .profile_pic{
+        width: 100px;
+        margin-top: -50px;
+    }
+    .profile_discription{
+        font-size: 14px;
+    }
+    #showmore_links{
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+        font-size: 14px;
+        cursor: pointer;
+
+    }
+    .sidebar_actively{
+        display: none;
+    }
+    .sidebar_actively.open_activity{
+        display: block;
+    }
+} */
+
+
+
+/* -----------------Network Page styling-------------- */
+
+.grow_container{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    gap: 15px;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+    
+}
+.grow_container a{
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grow_container a:hover{
+    background: #efecec85;
+    border-radius: 10px;
+}
+
+
+
+.profile_container_inner div{
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.profile_container_inner div a{
+    font-size: 18px;
+    font-weight: 500;
+}
+.profile_container_inner div a:hover {
+    background: #e1e0e0;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.profile_container_inner div h3{
+    font-weight: 100;
+}
+.connection_invitations img{
+    border-radius: 50%;
+
+}
+
+
+.connection_invitations div{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+.connection_invitations div h3{
+    font-weight: 600;
+    line-height: 20px;
+}
+
+
+.connection_invitations div p img{
+    height: 20px;
+    width: 20px;
+    align-items: center;
+    padding-top: 5px;  
+}
+
+.connection_btn .primary_btn{
+    font-weight: 600;
+}
+
+.connection_btn  button{
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: #fff;   
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.connection_btn span{
+    border: 2px solid #045be6;
+    border-radius: 20px;
+    display: flex;
+}
+
+
+
+.connect_menu{
+    flex-basis: 73%;
+}
+
+.connect_sidebar{
+    flex-basis: 25%;
+    align-self: flex-start;
+    position: sticky;
+    top: 73px;
+    
+}
+
+.connect_manage{
+    padding-top: 15px;
+    padding-left: 10px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.connect_manage h3{
+    padding-bottom: 10px;
+}
+
+.time_pass_pic{
+    margin-left: -30px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+.premium_description{
+    background: #fff;
+    padding: 20px 4% 30px;
+    margin: 12px 0;
+    border-radius: 10px;
+    padding-top: 15px;
+    line-height: 30px;
+}
+.premium_description h3{
+    font-weight: 100;
+    color: #151515;
+}
+.premium_description div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+} 
+.premium_description a button{
+    height: 2rem;
+    width: 10rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background: rgba(218, 134, 7, 0.591);
+    border: none;
+
+}
+
+
+
+/* ---------styling the left side bar --------- */
+.connect_manage div{
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 10px;
+    
+}
+.connect_manage div a i{
+    height: 15px;
+    width: 15px;
+    font-size: large;
+    margin-right: 15px;
+
+ 
+}
+
+
+ .connect_conatiner{
+    background: #fff;
+    border-radius: 10px;
+}
+
+
+.left_premium{
+    background: #fff;
+    padding: 20px 4% 30px;
+    margin: 12px 0;
+    border-radius: 10px;
+    padding-top: 15px;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.left_premium h3 span{
+    font-size: 14px;
+    margin-left: 250px;
+    text-align: center;
+}
+.left_premium span{
+    text-align: center;
+}
+
+.left_premium .middle_Premium img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.left_premium a button{
+    font-size: 18px;
+    font-weight: 600;
+    height: 25px;
+    width: 8rem;
+    outline: none;
+    border: 1px solid #045be6;
+    background: #f0f2f5;
+    border-radius: 20px;
+}
+
+.left_premium p{
+    font-size: 20px;
+    text-align: center;
+}
+
+/* -------------creating the card sections for follows ---------------- */
+.card_profile_description{
+    
+    background: #fff;
+    padding: 20px 4% 30px;
+    margin: 12px 0;
+    border-radius: 10px;
+ 
+}
+
+.profile_card_container{
+    display: flex;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3 , 250px);
+    grid-template-rows: repeat(auto , 300px) ;
+    gap: 0.8rem;
+}
+
+.more{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: -5px;
+}
+
+.connection_link{
+    font-size: 18px;
+    font-weight: 500;
+}
+.card_container{
+    height: 300px;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #ebe7e768;
+    transition: all ease 0.5s;
+    
+}
+
+
+.card_container:hover{
+    box-shadow: 2px 2px 5px rgb(179, 163, 163);
+    
+}
+.card_container .coverimg{
+    width: 100%;
+    height: 100px;
+}
+.card_container .profileimg{
+    height: 125px;
+    margin-top: -80px;
+    width: 125px;
+    /* border-radius:50%; */
+    margin-left: 25%;
+    
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content span{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(64, 59, 59);
+    margin-bottom: 10px;
+}
+.content h3{
+    color: #151515;
+    text-align: center;
+}
+
+.content a button{
+    height: 3rem;
+    width: 12rem;
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid blue;
+    outline: none;
+    border-radius: 25px;
+    margin-top: 8px;
+}
+
+.content a button:hover{
+    background: #fff;
+}
+
+
+@media only screen and (max-width:650px) {
+    .search_box{
+        background: transparent;
+        width: auto;
+        padding: 0;
+
+    }
+    .search_box input{
+        width: 0;
+        padding: 0;
+    }
+    .navbar_center ul li a span{
+        display: none;
+    }
+    .navbar_center ul li a {
+        padding-right: 0;
+        margin: 5px;
+    }
+    .nav_profile_img{
+        width: 30px;
+    }
+    
+    .left_premium{
+        display: none;
+    }
+    .connect_manage{
+        display: none;
+    }
+    .connect_menu{
+        flex-basis: 100%;
+    }
+
+    .card_profile_description .profile_card_container{
+        grid-template-columns: repeat(1,60%);
+    }
+    .prreee{
+        display: none;
+        
+    }
+    
+    
+}
+
+
+
+@media only screen and (min-width:650px) and (max-width:900px) {
+    .search_box{
+        background: transparent;
+        width: auto;
+        padding: 0;
+
+    }
+    .search_box input{
+        width: 0;
+        padding: 0;
+    }
+    .navbar_center ul li a span{
+        display: none;
+    }
+    .navbar_center ul li a {
+        padding-right: 0;
+        margin: 5px;
+    }
+    .nav_profile_img{
+        width: 30px;
+    }
+    
+    .left_premium{
+        display: none;
+    }
+    .connect_manage{
+        display: none;
+    }
+    .connect_menu{
+        flex-basis: 100%;
+    }
+
+    .card_profile_description .profile_card_container{
+        grid-template-columns: repeat(2 , 45%);
+    }
+    .prreee{
+        display: none;
+        
+    }
+    
+    
+}
+
+@media only screen and (min-width:900px) and (max-width:1100px) {
+
+    .search_box{
+        background: transparent;
+        width: auto;
+        padding: 0;
+
+    }
+    .search_box input{
+        width: 0;
+        padding: 0;
+    }
+    .navbar_center ul li a span{
+        display: none;
+    }
+    .navbar_center ul li a {
+        padding-right: 0;
+        margin: 5px;
+    }
+    .nav_profile_img{
+        width: 30px;
+    }
+    .card_profile_description .profile_card_container{
+        grid-template-columns: repeat(3,27%);
+
+    }
+    .left_premium{
+        display: none;
+    }
+    .connect_manage{
+     display: none;
+    }
+  
+    .prreee{
+        display: none;
+        
+    }
+    
+    .connect_sidebar{
+        flex-basis: 100%;
+        position: relative;
+        margin-bottom: 20px;
+        margin-top:-4rem;
+        
+    }
+    
+    .connect_sidebar{
+        flex-basis: 100%;
+    }
+    .connect_menu{
+        flex-basis: 100%;
+    
+    }
+
+    .grow_container{
+        margin-top: 60px;
+    }
+}
+
+
+@media only screen and (max-width:600px){
+  
+    .search_box{
+        background: transparent;
+        width: auto;
+        padding: 0;
+
+    }
+    .search_box input{
+        width: 0;
+        padding: 0;
+    }
+    .navbar_center ul li a span{
+        display: none;
+    }
+    .navbar_center ul li a {
+        padding-right: 0;
+        margin: 5px;
+    }
+    .nav_profile_img{
+        width: 30px;
+    }
+    .container{
+        padding: 15px 3%;
+    }
+    .left_side_Bar,.right_side_Bar{
+        flex-basis: 100%;
+        position: relative;
+        top: unset;
+    }
+    .main_Bar{
+        flex-basis: 100%;
+    }
+    .post_impression {
+        margin: 2px 0;
+    }
+    .post_avtivity_link span{
+        display: none;
+
+    }
+    .post_avtivity_link img{
+        margin-right: 0;
+    }
+    .profile_main,.profile_sidebar{
+        flex-basis: 100%;
+    }
+    .profile_conatiner{
+        font-size: 14px;
+    }
+    .profile_pic{
+        width: 100px;
+        margin-top: -50px;
+    }
+    .profile_discription{
+        font-size: 14px;
+    }
+    #showmore_links{
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+        font-size: 14px;
+        cursor: pointer;
+
+    }
+    .sidebar_actively{
+        display: none;
+    }
+    .sidebar_actively.open_activity{
+        display: block;
+    }
+}
