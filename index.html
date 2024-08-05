@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkedin</title>
+    <!-------- linking style-sheet-------------->
+    <link rel="stylesheet" href="style.css" />
+    <!-- linking fontAwsome for using the Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
+    "
+    />
+  </head>
+  <body>
+    <!-------------------------------- Creating the Navigation Bar------------------------->
+
+    <nav class="navbar">
+      <div class="navbar_left">
+        <a href="index.html" class="logo"
+          ><img src="img/logo.png" alt="imgoflogo"
+        /></a>
+
+        <div class="search_box">
+          <img src="img/search.png" alt="" />
+          <input type="text " placeholder="Search" />
+        </div>
+      </div>
+      <div class="navbar_center">
+        <ul>
+          <li>
+            <a href="index.html" class="active_link"
+              ><img src="img/home.png" alt="imgofhome" /><span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="network.html"
+              ><img src="img/network.png" alt="imgofhome" /><span
+                >My Network</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="img/jobs.png" alt="imgofhome" /><span>Jobs</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="img/message.png" alt="imgofhome" /><span
+                >Messaging</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="img/notification.png" alt="imgofhome" /><span
+                >Notifications</span
+              ></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="navbar_right">
+        <div class="online">
+          <img
+            src="img/Naveen1.png"
+            style="border: 1px solid black"
+            class="nav_profile_img"
+            alt="profile"
+            onclick="toggleMenu()"
+          />
+        </div>
+      </div>
+      <!-----------------------------------Profile Dorpdown menu------------------------------->
+
+      <div class="profile_menu_container" id="profileMenu">
+        <div class="profile_menu">
+          <div class="user_info">
+            <img src="img/Naveen1.png" style="border: 1px solid black" alt="" />
+            <div>
+              <h3>Naveen Sahu</h3>
+              <a href="profile.html"><button>See your profile</button></a>
+            </div>
+          </div>
+          <hr />
+          <h3>Account</h3>
+          <a href="#" class="profile_menu_link">
+            <img src="img/premium.png" alt="" />
+            <p>Try 1 month of Premium for &#8377;0</p>
+            <span>></span>
+          </a>
+
+          <a href="#" class="profile_menu_link">
+            <p>Settings & Privacy</p>
+          </a>
+
+          <a href="#" class="profile_menu_link">
+            <p>Help</p>
+          </a>
+
+          <a href="#" class="profile_menu_link">
+            <p>Language</p>
+          </a>
+
+          <hr />
+          <h3>Manage</h3>
+          <a href="#" class="profile_menu_link">
+            <p>Post & Activity</p>
+          </a>
+          <a href="#" class="profile_menu_link">
+            <p>Job Posting Account</p>
+          </a>
+
+          <hr />
+          <a href="#" class="profile_menu_link">
+            <p>Sign Out</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-------------------------------------Navigation Bar Closed------------------------------>
+
+    <div class="container">
+      <!------------------------------Creating the left Side Bar------------------------------------->
+
+      <div class="left_side_Bar">
+        <div class="sidebar_profile_box">
+          <img src="img/N.png" width="100%" alt="" />
+          <div class="sidebar_profile_info">
+            <img src="img/Naveen1.png" style="border: 1px solid black" alt="" />
+            <h1>Naveen Sahu</h1>
+            <h3>Web Developer at</h3>
+            <ul>
+              <li>Your profile views <span>52</span></li>
+              <li>Your post views <span>52</span></li>
+              <li>Your connections views <span>205</span></li>
+            </ul>
+          </div>
+          <div class="sidebar_profile_link">
+            <a href="#"><img src="img/items.png" alt="" />My items</a>
+            <a href="#"><img src="img/premium.png" alt="" />Try Premium</a>
+          </div>
+        </div>
+
+        <div class="sidebar_actively" id="sidebarActivity">
+          <h3>Recent</h3>
+          <a href="#"><img src="img/recent.png" alt="" />Web Development</a>
+          <a href="#"><img src="img/recent.png" alt="" />User Interface</a>
+          <a href="#"><img src="img/recent.png" alt="" />Online Learning</a>
+          <a href="#"><img src="img/recent.png" alt="" />Learn Online</a>
+          <a href="#"><img src="img/recent.png" alt="" />Code Better</a>
+          <a href="#"><img src="img/recent.png" alt="" />Group Learning</a>
+
+          <h3>Groups</h3>
+          <a href="#"><img src="img/group.png" alt="" />Web Design Group</a>
+          <a href="#"><img src="img/group.png" alt="" />HTML & CSS learning</a>
+          <a href="#"><img src="img/group.png" alt="" />Python & JavaScript</a>
+          <a href="#"><img src="img/group.png" alt="" />Learn Coding Online</a>
+
+          <h3>Hastag</h3>
+
+          <a href="#"><img src="img/hashtag.png" alt="" />webdevelopment</a>
+          <a href="#"><img src="img/hashtag.png" alt="" />userinterface</a>
+          <a href="#"><img src="img/hashtag.png" alt="" />onlinelearning</a>
+
+          <div class="discover_more_link">
+            <a href="#">Discover more</a>
+          </div>
+        </div>
+        <p id="showmore_links" onclick="toggleActivity()">Show more <b>+</b></p>
+      </div>
+      <!------------------------------closing the left side bar--------------------------------->
+
+      <!----------------------------Creating the Main Side Bar----------------------------------->
+
+      <div class="main_Bar">
+        <div class="create_post">
+          <div class="create_post_input">
+            <img
+              src="img/Naveen1.png"
+              style="border: 1px solid black"
+              alt="user-1"
+            />
+            <button>Start a post, try writing with AI</button>
+          </div>
+          <div class="create_post_link">
+            <li><img src="img/photo.png" alt="" />Photo</li>
+            <li><img src="img/video.png" alt="" />Video</li>
+            <li><img src="img/event.png" alt="" />Event</li>
+            <li>Post</li>
+          </div>
+        </div>
+        <div class="sort_by">
+          <hr />
+          <p>
+            Sort by : <span>top <img src="img/down-arrow.png" alt="" /></span>
+          </p>
+        </div>
+
+        <!-- --------------------------------Creating the post --------------------------------->
+        <div class="post">
+          <div class="post_author">
+            <img src="img/user-1.png" alt="" />
+            <div>
+              <h2>Ram</h2>
+              <small>Founder and CEO | Angle Investor</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+            dolorem nam quasi ad culpa quaerat deserunt molestiae illum aliquam
+            autem!
+          </p>
+          <img
+            src="img/samsung-memory-3HE0jiH8NhU-unsplash.jpg"
+            width="100%"
+            alt=""
+          />
+
+          <div class="post_impression">
+            <div>
+              <img src="img/thumbsup.png" alt="" />
+              <img src="img/love.png" alt="" />
+              <img src="img/clap.png" alt="" />
+              <span class="liked_user">Abhinav mishra ans 75 others</span>
+            </div>
+            <div>
+              <span>22 comments &middot; 40 shares</span>
+            </div>
+          </div>
+          <div class="post_avtivity">
+            <div>
+              <img
+                src="img/Naveen1.png"
+                class="post_avtivity_user_icons"
+                alt=""
+              />
+              <img
+                src="img/down-arrow.png"
+                class="post_avtivity_arrow_icons"
+                alt=""
+              />
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post_author">
+            <img src="img/user-3.png" alt="" />
+            <div>
+              <h2>Jimi</h2>
+              <small>Founder and CEO | Angle Investor</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+            dolorem nam quasi ad culpa quaerat deserunt molestiae illum aliquam
+            autem!
+          </p>
+          <img
+            src="img/sam-mcghee-4siwRamtFAk-unsplash.jpg"
+            width="100%"
+            alt=""
+          />
+
+          <div class="post_impression">
+            <div>
+              <img src="img/thumbsup.png" alt="" />
+              <img src="img/love.png" alt="" />
+              <img src="img/clap.png" alt="" />
+              <span class="liked_user">Abhinav mishra ans 75 others</span>
+            </div>
+            <div>
+              <span>22 comments &middot; 40 shares</span>
+            </div>
+          </div>
+          <div class="post_avtivity">
+            <div>
+              <img
+                src="img/Naveen1.png"
+                class="post_avtivity_user_icons"
+                alt=""
+              />
+              <img
+                src="img/down-arrow.png"
+                class="post_avtivity_arrow_icons"
+                alt=""
+              />
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post_author">
+            <img src="img/user-4.png" alt="" />
+            <div>
+              <h2>Moni</h2>
+              <small>Founder and CEO | Angle Investor</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+            dolorem nam quasi ad culpa quaerat deserunt molestiae illum aliquam
+            autem!
+          </p>
+          <img
+            src="img/cash-macanaya-VIZ2R40SSfA-unsplash.jpg"
+            width="100%"
+            alt=""
+          />
+
+          <div class="post_impression">
+            <div>
+              <img src="img/thumbsup.png" alt="" />
+              <img src="img/love.png" alt="" />
+              <img src="img/clap.png" alt="" />
+              <span class="liked_user">Abhinav mishra ans 75 others</span>
+            </div>
+            <div>
+              <span>22 comments &middot; 40 shares</span>
+            </div>
+          </div>
+          <div class="post_avtivity">
+            <div>
+              <img
+                src="img/Naveen1.png"
+                class="post_avtivity_user_icons"
+                alt=""
+              />
+              <img
+                src="img/down-arrow.png"
+                class="post_avtivity_arrow_icons"
+                alt=""
+              />
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post_author">
+            <img src="img/user-5.png" alt="" />
+            <div>
+              <h2>Raghuv</h2>
+              <small>Founder and CEO | Angle Investor</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+            dolorem nam quasi ad culpa quaerat deserunt molestiae illum aliquam
+            autem!
+          </p>
+          <img
+            src="img/amr-taha-TkP5DP8L2Fw-unsplash.jpg"
+            width="100%"
+            alt=""
+          />
+
+          <div class="post_impression">
+            <div>
+              <img src="img/thumbsup.png" alt="" />
+              <img src="img/love.png" alt="" />
+              <img src="img/clap.png" alt="" />
+              <span class="liked_user">Abhinav mishra ans 75 others</span>
+            </div>
+            <div>
+              <span>22 comments &middot; 40 shares</span>
+            </div>
+          </div>
+          <div class="post_avtivity">
+            <div>
+              <img
+                src="img/Naveen1.png"
+                class="post_avtivity_user_icons"
+                alt=""
+              />
+              <img
+                src="img/down-arrow.png"
+                class="post_avtivity_arrow_icons"
+                alt=""
+              />
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post_author">
+            <img src="img/user-2.png" alt="" />
+            <div>
+              <h2>Ram</h2>
+              <small>Founder and CEO | Angle Investor</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+            dolorem nam quasi ad culpa quaerat deserunt molestiae illum aliquam
+            autem!
+          </p>
+          <img
+            src="img/vitaly-gariev-M2lMs1qK54g-unsplash.jpg"
+            width="100%"
+            alt=""
+          />
+
+          <div class="post_impression">
+            <div>
+              <img src="img/thumbsup.png" alt="" />
+              <img src="img/love.png" alt="" />
+              <img src="img/clap.png" alt="" />
+              <span class="liked_user">Abhinav mishra ans 75 others</span>
+            </div>
+            <div>
+              <span>22 comments &middot; 40 shares</span>
+            </div>
+          </div>
+          <div class="post_avtivity">
+            <div>
+              <img
+                src="img/Naveen1.png"
+                class="post_avtivity_user_icons"
+                alt=""
+              />
+              <img
+                src="img/down-arrow.png"
+                class="post_avtivity_arrow_icons"
+                alt=""
+              />
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post_author">
+            <img src="img/Naveen1.png" alt="" />
+            <div>
+              <h2>Naveen Sahu</h2>
+              <small>Founder and CEO | Angle Investor</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+            dolorem nam quasi ad culpa quaerat deserunt molestiae illum aliquam
+            autem!
+          </p>
+          <img
+            src="img/igor-shalyminov-lkqQHMNrOYQ-unsplash.jpg"
+            width="100%"
+            alt=""
+          />
+
+          <div class="post_impression">
+            <div>
+              <img src="img/thumbsup.png" alt="" />
+              <img src="img/love.png" alt="" />
+              <img src="img/clap.png" alt="" />
+              <span class="liked_user">Abhinav mishra ans 75 others</span>
+            </div>
+            <div>
+              <span>22 comments &middot; 40 shares</span>
+            </div>
+          </div>
+          <div class="post_avtivity">
+            <div>
+              <img
+                src="img/Naveen1.png"
+                class="post_avtivity_user_icons"
+                alt=""
+              />
+              <img
+                src="img/down-arrow.png"
+                class="post_avtivity_arrow_icons"
+                alt=""
+              />
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post_author">
+            <img src="img/user-1.png" alt="" />
+            <div>
+              <h2>Rahul</h2>
+              <small>Founder and CEO | Angle Investor</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+            dolorem nam quasi ad culpa quaerat deserunt molestiae illum aliquam
+            autem!
+          </p>
+          <img
+            src="img/buddy-photo-Yu81r9KayiE-unsplash.jpg"
+            width="100%"
+            alt=""
+          />
+
+          <div class="post_impression">
+            <div>
+              <img src="img/thumbsup.png" alt="" />
+              <img src="img/love.png" alt="" />
+              <img src="img/clap.png" alt="" />
+              <span class="liked_user">Abhinav mishra ans 75 others</span>
+            </div>
+            <div>
+              <span>22 comments &middot; 40 shares</span>
+            </div>
+          </div>
+          <div class="post_avtivity">
+            <div>
+              <img
+                src="img/Naveen1.png"
+                class="post_avtivity_user_icons"
+                alt=""
+              />
+              <img
+                src="img/down-arrow.png"
+                class="post_avtivity_arrow_icons"
+                alt=""
+              />
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post_author">
+            <img src="img/user-3.png" alt="" />
+            <div>
+              <h2>Jimi</h2>
+              <small>Founder and CEO | Angle Investor</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+            dolorem nam quasi ad culpa quaerat deserunt molestiae illum aliquam
+            autem!
+          </p>
+          <img
+            src="img/glen-carrie-mQ8GR35n8QQ-unsplash.jpg"
+            width="100%"
+            alt=""
+          />
+
+          <div class="post_impression">
+            <div>
+              <img src="img/thumbsup.png" alt="" />
+              <img src="img/love.png" alt="" />
+              <img src="img/clap.png" alt="" />
+              <span class="liked_user">Abhinav mishra ans 75 others</span>
+            </div>
+            <div>
+              <span>22 comments &middot; 40 shares</span>
+            </div>
+          </div>
+          <div class="post_avtivity">
+            <div>
+              <img
+                src="img/Naveen1.png"
+                class="post_avtivity_user_icons"
+                alt=""
+              />
+              <img
+                src="img/down-arrow.png"
+                class="post_avtivity_arrow_icons"
+                alt=""
+              />
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post_avtivity_link">
+              <img src="img/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------------------------------------closing the Main Side Bar----------------------------------->
+
+      <!---------------------------------------Creating the Right Side Bar------------------------------------->
+
+      <div class="right_side_Bar">
+        <div class="sidebar_news">
+          <img src="img/more.png" class="info_icon" alt="" />
+          <h1>Treanding News</h1>
+          <a href="#">High demand for the skilled manpower</a>
+          <span>1d ago &middot; 10,945 readers</span>
+
+          <a href="#">Careers growing horizontally too</a>
+          <span>19h ago &middot; 145 readers</span>
+
+          <a href="#">Less work visa for US, more for UK</a>
+          <span>1h ago &middot; 1,945 readers</span>
+
+          <a href="#">More hiring = More confidence?</a>
+          <span>15d ago &middot; 945 readers</span>
+
+          <a href="#">Gautam Adani is the world' third richestest</a>
+          <span>2m ago &middot; 1,655 readers</span>
+
+          <a href="#" class="read_more_link">Read more</a>
+        </div>
+
+        <div class="sidebar_ad">
+          <small>Ad &middot; &middot; &middot; </small>
+          <p>Master the 5 principles of the web design</p>
+          <div>
+            <img src="img/Naveen1.png" style="border: 1px solid black" alt="" />
+            <img src="img/mi-logo.png" alt="" />
+          </div>
+          <b>Brand and Demand in Xiaomi</b>
+          <a href="#" class="ad_link">Learn more</a>
+        </div>
+
+        <div class="sidebar_useful_links">
+          <a href="#">About</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Help Center</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Advertising</a>
+          <a href="#">Get The App</a>
+          <a href="#">More</a>
+          <div class="copyright_msg">
+            <img src="img/logo.png" alt="" />
+            <p>Linkedup &copy;; 2024 All right reversed</p>
+          </div>
+        </div>
+      </div>
+
+      <!---------------------------------------closing the Right Side Bar------------------------------------->
+    </div>
+
+    <!-- -----------------------Adding the JavaScript-------------------------------------------->
+    <script>
+      let profileMenu = document.querySelector("#profileMenu");
+
+      function toggleMenu() {
+        profileMenu.classList.toggle("open_menu");
+      }
+
+      let sidebarActivity = document.getElementById("sidebarActivity");
+      let moreLinks = document.getElementById("showmore_links");
+
+      function toggleActivity() {
+        sidebarActivity.classList.toggle("open_activity");
+        if (sidebarActivity.classList.contains("open_activity")) {
+          moreLinks.innerHTML = "show less <b> - </b>";
+        } else {
+          moreLinks.innerHTML = "show more <b> + </b>";
+        }
+      }
+    </script>
+  </body>
+</html>
